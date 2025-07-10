@@ -1,85 +1,144 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<style lang="scss">
+  //COLORS
+  $BLUE-900: #0B0D17;
+  $BLUE-900: #D0D6F9;
+  $WHITE: #FFFFFF;
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+  //TYPOGRAPHY
+  $TEXT-PRESET-1-FONT: "Bellefair", serif;
+  $TEXT-PRESET-5-FONT: "Barlow Condensed", sans-serif;
+  $TEXT-PRESET-9-FONT: "Barlow", sans-serif;
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+  //MIXIN
+  @mixin TEXT-PRESET-1 {
+    font-family: $TEXT-PRESET-1-FONT;
+    font-size: 144px;
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    line-height: normal;
+    letter-spacing: 0;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  @mixin TEXT-PRESET-2 {
+    font-family: $TEXT-PRESET-1-FONT;
+    font-size: 100px;
+
+    line-height: normal;
+    letter-spacing: 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  @mixin TEXT-PRESET-3 {
+    font-family: $TEXT-PRESET-1-FONT;
+    font-size: 56px;
+
+    line-height: normal;
+    letter-spacing: 0;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+  @mixin TEXT-PRESET-4 {
+    font-family: $TEXT-PRESET-1-FONT;
+    font-size: 32px;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+    line-height: normal;
+    letter-spacing: 0;
   }
-}
+
+  @mixin TEXT-PRESET-5 {
+    font-family: $TEXT-PRESET-5-FONT;
+    font-size: 28px;
+
+    line-height: normal;
+    letter-spacing: 4px;
+  }
+
+  @mixin TEXT-PRESET-6 {
+    font-family: $TEXT-PRESET-1-FONT;
+    font-size: 28px;
+
+    line-height: normal;
+    letter-spacing: 0;
+  }
+
+  @mixin TEXT-PRESET-7 {
+    font-family: $TEXT-PRESET-5-FONT;
+    font-size: 14px;
+
+    line-height: normal;
+    letter-spacing: 2px;
+  }
+
+  @mixin TEXT-PRESET-8 {
+    font-family: $TEXT-PRESET-5-FONT;
+    font-size: 16px;
+
+    line-height: normal;
+    letter-spacing: 2px;
+  }
+
+  @mixin TEXT-PRESET-9 {
+    font-family: $TEXT-PRESET-9-FONT;
+    font-size: 18px;
+
+    line-height: normal;
+    letter-spacing: 0;
+  }
+
+  // SPACING
+  $SPACING-1600: 128px;
+  $SPACING-1200: 96px;
+  $SPACING-1000: 80px;
+  $SPACING-800: 64px;
+  $SPACING-600: 48px;
+  $SPACING-500: 40px;
+  $SPACING-400: 32px;
+  $SPACING-300: 24px;
+  $SPACING-200: 16px;
+  $SPACING-150: 12px;
+  $SPACING-100: 8px;
+  $SPACING-50: 4px;
+  $SPACING-25: 2px;
+
+
+
+  /*.pollen {
+    @include TEXT-PRESET-1;
+  }*/
+
+  // GENERAL
+    
+  * {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+  //  font-family: 'sansita', sans-serif;
+
+    text-decoration: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+    cursor: pointer;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+
 </style>
