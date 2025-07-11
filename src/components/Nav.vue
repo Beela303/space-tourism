@@ -21,13 +21,15 @@ export default {
 <template>
     <div id="nav">
         <div id="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-                <g fill="none" fill-rule="evenodd">
-                    <circle cx="24" cy="24" r="24" fill="#FFF" />
-                    <path fill="#0B0D17"
-                        d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
-                </g>
-            </svg>
+            <router-link to="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                    <g fill="none" fill-rule="evenodd">
+                        <circle cx="24" cy="24" r="24" fill="#FFF" />
+                        <path fill="#0B0D17"
+                            d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
+                    </g>
+                </svg>
+            </router-link>
         </div>
 
         <hr>
@@ -71,7 +73,7 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/variables-mixins.scss';
 
 #nav {
@@ -96,7 +98,8 @@ export default {
     #glass-nav {
         background-color: rgba(255, 255, 255, .1);
 
-        width: 900px;
+        //width: 768px; //900
+        width: 90%;
         height: 96px;
 
         padding: 35px;
@@ -134,7 +137,7 @@ export default {
                 a {
                     color: $WHITE;
                     @include TEXT-PRESET-8();
-                    font-size: 12px;
+                    //font-size: 12px;
 
                     display: flex;
 
@@ -150,6 +153,7 @@ export default {
 
 @media screen and (max-width: 768px) {
     #nav {
+
         hr {
             display: none;
         }
@@ -160,7 +164,7 @@ export default {
         }
 
         #glass-nav {
-            width: 900px;
+            width: 640px;
             /* 640 */
 
             padding: 38.5px;
@@ -182,7 +186,10 @@ export default {
 }
 
 @media screen and (min-width: 375px) {
-    .menu {
+
+    .menu,
+    #open-menu,
+    #close-menu {
         display: none;
     }
 }
@@ -244,7 +251,7 @@ export default {
                     margin-bottom: 32px;
 
                     &:first-child {
-                        margin-left: 0;
+                        margin-left: 32px;
                     }
 
                     &:hover {

@@ -24,6 +24,7 @@ import Nav from './components/Nav.vue';
 }
 
 body {
+  color: $WHITE;
   overflow-x: hidden;
 }
 

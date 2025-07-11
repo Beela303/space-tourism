@@ -1,6 +1,6 @@
 //COLORS
 $BLUE-900: #0b0d17;
-$BLUE-900: #d0d6f9;
+$BLUE-300: #d0d6f9;
 $WHITE: #ffffff;
 $OPEN-MENU-BG: #0b0d17;
 
@@ -82,6 +82,57 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
   letter-spacing: 0;
 }
 
+@media screen and (max-width: 768px) {
+  @mixin TEXT-PRESET-2 {
+    font-size: 80px;
+  }
+
+  @mixin TEXT-PRESET-3 {
+    font-size: 40px;
+  }
+
+  @mixin TEXT-PRESET-4 {
+    font-size: 24px;
+  }
+
+  @mixin TEXT-PRESET-5 {
+    font-size: 20px;
+  }
+
+  @mixin TEXT-PRESET-9 {
+    font-size: 16/120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  @mixin TEXT-PRESET-1 {
+    font-size: 80px;
+  }
+
+  @mixin TEXT-PRESET-2 {
+    font-size: 56px;
+  }
+
+  @mixin TEXT-PRESET-3 {
+    font-size: 24px;
+  }
+
+  @mixin TEXT-PRESET-4 {
+    font-size: 18px;
+  }
+
+  @mixin TEXT-PRESET-6 {
+    font-size: 16px;
+  }
+
+  @mixin TEXT-PRESET-8 {
+    font-size: 14px;
+  }
+
+  @mixin TEXT-PRESET-9 {
+    font-size: 15/180px;
+  }
+}
 // SPACING
 $SPACING-1600: 128px;
 $SPACING-1200: 96px;
