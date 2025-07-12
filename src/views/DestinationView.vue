@@ -1,16 +1,9 @@
 <script>
 import Moon from '../components/Moon.vue'
-import data from '../data.json'
 
 export default {
     components: {
         Moon,
-    },
-
-    data() {
-        return {
-            jsonData: data,
-        };
     },
 }
 </script>
@@ -35,6 +28,7 @@ body {
 
     p {
         @include TEXT-PRESET-5;
+        color: $WHITE;
 
         #title-number {
             @include TITLE-NUMBER;

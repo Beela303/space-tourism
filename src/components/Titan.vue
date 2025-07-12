@@ -28,7 +28,7 @@
                     </ul>
                 </div>
 
-                <p id="planet-title">Titan</p>
+                <p id="planet-title">TITAN</p>
 
                 <p id="planet-description">
                     The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home

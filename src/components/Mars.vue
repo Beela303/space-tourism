@@ -28,7 +28,7 @@
                     </ul>
                 </div>
 
-                <p id="planet-title">Mars</p>
+                <p id="planet-title">MARS</p>
 
                 <p id="planet-description">
                     Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest

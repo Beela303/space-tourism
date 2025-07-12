@@ -25,7 +25,7 @@
                 </ul>
             </div>
 
-            <p id="planet-title">Moon</p>
+            <p id="planet-title">MOON</p>
 
             <p id="planet-description">
                 See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain

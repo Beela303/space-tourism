@@ -28,7 +28,7 @@
                     </ul>
                 </div>
 
-                <p id="planet-title">Europa</p>
+                <p id="planet-title">EUROPA</p>
 
                 <p id="planet-description">
                     The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an

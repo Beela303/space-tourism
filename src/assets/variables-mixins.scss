@@ -156,7 +156,7 @@ $transition: 20s;
 @mixin TITLE-NUMBER {
   color: $WHITE;
 
-  margin-right: 5px;
+  margin-right: 24px;
 
   font-family: $FONT-2;
   font-weight: bold;
@@ -168,8 +168,6 @@ $transition: 20s;
 
 @media screen and (max-width: 768px) {
   @mixin TITLE-NUMBER {
-    margin-right: 24px;
-
     font-size: 20px;
     letter-spacing: 15%;
   }
