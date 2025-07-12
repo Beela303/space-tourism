@@ -5,13 +5,13 @@ $WHITE: #ffffff;
 $OPEN-MENU-BG: #0b0d17;
 
 //TYPOGRAPHY
-$TEXT-PRESET-1-FONT: 'Bellefair', serif;
-$TEXT-PRESET-5-FONT: 'Barlow Condensed', sans-serif;
-$TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
+$FONT-1: 'Bellefair', serif; //159
+$FONT-2: 'Barlow Condensed', sans-serif;
+$FONT-3: 'Barlow', sans-serif;
 
 //MIXIN
 @mixin TEXT-PRESET-1 {
-  font-family: $TEXT-PRESET-1-FONT;
+  font-family: $FONT-1;
   font-size: 144px;
 
   line-height: normal;
@@ -19,7 +19,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-2 {
-  font-family: $TEXT-PRESET-1-FONT;
+  font-family: $FONT-1;
   font-size: 100px;
 
   line-height: normal;
@@ -27,7 +27,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-3 {
-  font-family: $TEXT-PRESET-1-FONT;
+  font-family: $FONT-1;
   font-size: 56px;
 
   line-height: normal;
@@ -35,7 +35,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-4 {
-  font-family: $TEXT-PRESET-1-FONT;
+  font-family: $FONT-1;
   font-size: 32px;
 
   line-height: normal;
@@ -43,7 +43,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-5 {
-  font-family: $TEXT-PRESET-5-FONT;
+  font-family: $FONT-2;
   font-size: 28px;
 
   line-height: normal;
@@ -51,7 +51,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-6 {
-  font-family: $TEXT-PRESET-1-FONT;
+  font-family: $FONT-1;
   font-size: 28px;
 
   line-height: normal;
@@ -59,7 +59,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-7 {
-  font-family: $TEXT-PRESET-5-FONT;
+  font-family: $FONT-2;
   font-size: 14px;
 
   line-height: normal;
@@ -67,7 +67,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-8 {
-  font-family: $TEXT-PRESET-5-FONT;
+  font-family: $FONT-2;
   font-size: 16px;
 
   line-height: normal;
@@ -75,7 +75,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
 }
 
 @mixin TEXT-PRESET-9 {
-  font-family: $TEXT-PRESET-9-FONT;
+  font-family: $FONT-3;
   font-size: 18px;
 
   line-height: normal;
@@ -133,6 +133,7 @@ $TEXT-PRESET-9-FONT: 'Barlow', sans-serif;
     font-size: 15/180px;
   }
 }
+
 // SPACING
 $SPACING-1600: 128px;
 $SPACING-1200: 96px;
@@ -147,3 +148,38 @@ $SPACING-150: 12px;
 $SPACING-100: 8px;
 $SPACING-50: 4px;
 $SPACING-25: 2px;
+
+//TRANSITION
+$transition: 20s;
+
+// TITLE NUMBER
+@mixin TITLE-NUMBER {
+  color: $WHITE;
+
+  margin-right: 5px;
+
+  font-family: $FONT-2;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 4.72px;
+
+  opacity: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  @mixin TITLE-NUMBER {
+    margin-right: 24px;
+
+    font-size: 20px;
+    letter-spacing: 15%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  @mixin TITLE-NUMBER {
+    margin-right: 24px;
+    margin-left: 55px;
+
+    font-size: 16px;
+  }
+}

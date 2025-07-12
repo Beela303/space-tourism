@@ -57,16 +57,16 @@ export default {
 
             <ul>
                 <li>
-                    <router-link to="/"><span class="number">00</span> HOME</router-link>
+                    <router-link to="/"><span class="menu-number">00</span> HOME</router-link>
                 </li>
                 <li>
-                    <router-link to="/destination"><span class="number">01</span> DESTINATION</router-link>
+                    <router-link to="/destination"><span class="menu-number">01</span> DESTINATION</router-link>
                 </li>
                 <li>
-                    <router-link to="/crew"><span class="number">02</span> CREW</router-link>
+                    <router-link to="/crew"><span class="menu-number">02</span> CREW</router-link>
                 </li>
                 <li>
-                    <router-link to="/technology"><span class="number">03</span> TECHNOLOGY</router-link>
+                    <router-link to="/technology"><span class="menu-number">03</span> TECHNOLOGY</router-link>
                 </li>
             </ul>
         </div>
@@ -141,7 +141,7 @@ export default {
 
                     display: flex;
 
-                    .number {
+                    .menu-number {
                         margin-right: 12px;
                         font-weight: bold;
                     }
