@@ -81,7 +81,8 @@ export default {
 @import '../assets/variables-mixins.scss';
 
 .active-page {
-    border-bottom: 2px solid $WHITE;
+    padding-bottom: 30px;
+    border-bottom: 8px solid $WHITE;
 }
 
 #nav {
@@ -139,7 +140,7 @@ export default {
                 }
 
                 &:hover {
-                    border-bottom: 2px solid $WHITE;
+                    border-bottom: 8px solid $WHITE;
                 }
 
                 a {

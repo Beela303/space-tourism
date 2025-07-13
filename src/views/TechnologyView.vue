@@ -218,6 +218,9 @@ body {
 
         #transportation {
             #buttons {
+                width: 100%;
+                justify-content: center;
+
                 button {
                     width: 40px;
                     height: 40px;
@@ -230,7 +233,7 @@ body {
             }
 
             #image {
-                margin: 64px 32px 0 0;
+                margin: 64px 32px 0 0; //64px
 
                 img {
                     height: 258px;
