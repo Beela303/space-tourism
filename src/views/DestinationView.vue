@@ -5,11 +5,46 @@ export default {
     components: {
         Moon,
     },
+
+    data() {
+        return {
+            screenWidth: window.innerWidth,
+        };
+    },
+
+    computed: {
+        backgroundClass() {
+            if (this.screenWidth < 768) {
+                return "mobile-bg";
+            } else {
+                return "desktop-bg";
+            }
+        },
+
+        pageBackgroundClass() {
+            const routeName = this.$route.name;
+            return `${routeName}-page-bg`;
+        },
+    },
+
+    mounted() {
+        window.addEventListener("resize", this.updateScreenWidth);
+    },
+
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateScreenWidth);
+    },
+
+    methods: {
+        updateScreenWidth() {
+            this.screenWidth = window.innerWidth;
+        },
+    },
 }
 </script>
 
 <template>
-    <div id="destination">
+    <div id="destination" :class="[backgroundClass, pageBackgroundClass]">
         <p id="title"><span id="title-number">01</span>PICK YOUR DESTINATION</p>
 
         <Moon />
@@ -19,8 +54,12 @@ export default {
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
 
-body {
+.desktop-bg {
     background-image: url("../assets/destination/background-destination-desktop.jpg") !important;
+}
+
+.mobile-bg {
+    background-image: url("../assets/destination/background-destination-tablet.jpg") !important;
 }
 
 #destination {
@@ -118,10 +157,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-image: url("../assets/destination/background-destination-tablet.jpg") !important;
-    }
-
     #destination {
         padding: 40px;
 

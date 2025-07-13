@@ -1,8 +1,44 @@
-<script setup>
+<script>
+export default {
+  data() {
+    return {
+      screenWidth: window.innerWidth,
+    };
+  },
+
+  computed: {
+    homebackgroundClass() {
+      if (this.screenWidth < 768) {
+        return "home-mobile-bg";
+      } else {
+        return "home-desktop-bg";
+      }
+    },
+
+    homepageBackgroundClass() {
+      const routeName = this.$route.name;
+      return `${routeName}-page-bg`;
+    },
+  },
+
+  mounted() {
+    window.addEventListener("resize", this.updateScreenWidth);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.updateScreenWidth);
+  },
+
+  methods: {
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
+    },
+  },
+};
 </script>
 
 <template>
-  <div id="home">
+  <div id="home" :class="[homebackgroundClass, homepageBackgroundClass]">
     <div id="text">
       <p>SO, YOU WANT TO TRAVEL TO <br><span id="space-text">SPACE</span></p>
       <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of
@@ -18,8 +54,23 @@
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
 
-body {
-  background-image: url("../assets/home/background-home-desktop.jpg")
+.home-desktop-bg {
+  body {
+
+    background-image: url("../assets/home/background-home-desktop.jpg")
+  }
+}
+
+/*
+.home-mobile-bg {
+  background-image: url("../assets/home/background-home-tablet.jpg");
+}*/
+
+.home-mobile-bg {
+  body {
+
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
 }
 
 #home {
@@ -74,10 +125,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-image: url("../assets/home/background-home-tablet.jpg");
-  }
-
   #home {
     height: 334px;
     padding: 128px 50px;

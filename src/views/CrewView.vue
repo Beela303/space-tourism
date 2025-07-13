@@ -4,12 +4,47 @@ import DouglasHurley from '@/components/DouglasHurley.vue';
 export default {
     components: {
         DouglasHurley,
-    }
+    },
+
+    data() {
+        return {
+            screenWidth: window.innerWidth,
+        };
+    },
+
+    computed: {
+        crewbackgroundClass() {
+            if (this.screenWidth < 768) {
+                return "crew-mobile-bg";
+            } else {
+                return "crew-desktop-bg";
+            }
+        },
+
+        crewpageBackgroundClass() {
+            const routeName = this.$route.name;
+            return `${routeName}-page-bg`;
+        },
+    },
+
+    mounted() {
+        window.addEventListener("resize", this.updateScreenWidth);
+    },
+
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateScreenWidth);
+    },
+
+    methods: {
+        updateScreenWidth() {
+            this.screenWidth = window.innerWidth;
+        },
+    },
 }
 </script>
 
 <template>
-    <div id="crew-body">
+    <div id="crew-body" :class="[crewbackgroundClass, crewpageBackgroundClass]">
         <p id="title"><span id="title-number">02</span>MEET YOUR CREW</p>
 
         <DouglasHurley />
@@ -19,9 +54,14 @@ export default {
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
 
-body {
+.crew-desktop-bg {
     background-image: url("../assets/crew/background-crew-desktop.jpg") !important;
 }
+
+.crew-mobile-bg {
+    background-image: url("../assets/crew/background-crew-tablet.jpg") !important;
+}
+
 
 #crew-body {
     padding: 48px 165px;
@@ -98,11 +138,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-image: url("../assets/crew/background-crew-tablet.jpg") !important;
-    }
-
-
     #crew-body {
         padding: 40px;
         padding-bottom: 0;

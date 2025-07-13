@@ -1,5 +1,44 @@
+<script>
+export default {
+    data() {
+        return {
+            screenWidth: window.innerWidth,
+        };
+    },
+
+    computed: {
+        backgroundClass() {
+            if (this.screenWidth < 768) {
+                return "mobile-bg";
+            } else {
+                return "desktop-bg";
+            }
+        },
+
+        pageBackgroundClass() {
+            const routeName = this.$route.name;
+            return `${routeName}-page-bg`;
+        },
+    },
+
+    mounted() {
+        window.addEventListener("resize", this.updateScreenWidth);
+    },
+
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateScreenWidth);
+    },
+
+    methods: {
+        updateScreenWidth() {
+            this.screenWidth = window.innerWidth;
+        },
+    },
+}
+</script>
+
 <template>
-    <div id="destination">
+    <div id="destination" :class="[backgroundClass, pageBackgroundClass]">
         <p id="title"><span id="title-number">01</span>PICK YOUR DESTINATION</p>
 
         <div id="planet">

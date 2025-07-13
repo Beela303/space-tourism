@@ -4,12 +4,47 @@ import Vehicle from '@/components/Vehicle.vue';
 export default {
     components: {
         Vehicle,
-    }
+    },
+
+    data() {
+        return {
+            screenWidth: window.innerWidth,
+        };
+    },
+
+    computed: {
+        techbackgroundClass() {
+            if (this.screenWidth < 768) {
+                return "tech-mobile-bg";
+            } else {
+                return "tech-desktop-bg";
+            }
+        },
+
+        techpageBackgroundClass() {
+            const routeName = this.$route.name;
+            return `${routeName}-page-bg`;
+        },
+    },
+
+    mounted() {
+        window.addEventListener("resize", this.updateScreenWidth);
+    },
+
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateScreenWidth);
+    },
+
+    methods: {
+        updateScreenWidth() {
+            this.screenWidth = window.innerWidth;
+        },
+    },
 }
 </script>
 
 <template>
-    <div id="technology">
+    <div id="technology" :class="[techbackgroundClass, techpageBackgroundClass]">
         <p id="title"><span id="title-number">03</span>SPACE LAUNCH 101</p>
 
         <Vehicle />
@@ -19,8 +54,12 @@ export default {
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
 
-body {
+.tech-desktop-bg {
     background-image: url("../assets/technology/background-technology-desktop.jpg") !important;
+}
+
+.tech-mobile-bg {
+    background-image: url("../assets/technology/background-technology-tablet.jpg") !important;
 }
 
 .active-tech button {
@@ -124,10 +163,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-image: url("../assets/technology/background-technology-tablet.jpg") !important;
-    }
-
     #img-desktop {
         display: none;
     }
