@@ -57,16 +57,20 @@ export default {
 
             <ul>
                 <li>
-                    <router-link to="/"><span class="menu-number">00</span> HOME</router-link>
+                    <router-link exact-active-class="active-page" to="/"><span class="menu-number">00</span>
+                        HOME</router-link>
                 </li>
                 <li>
-                    <router-link to="/destination"><span class="menu-number">01</span> DESTINATION</router-link>
+                    <router-link exact-active-class="active-page" to="/destination"><span class="menu-number">01</span>
+                        DESTINATION</router-link>
                 </li>
                 <li>
-                    <router-link to="/crew"><span class="menu-number">02</span> CREW</router-link>
+                    <router-link exact-active-class="active-page" to="/crew"><span class="menu-number">02</span>
+                        CREW</router-link>
                 </li>
                 <li>
-                    <router-link to="/technology"><span class="menu-number">03</span> TECHNOLOGY</router-link>
+                    <router-link exact-active-class="active-page" to="/technology"><span class="menu-number">03</span>
+                        TECHNOLOGY</router-link>
                 </li>
             </ul>
         </div>
@@ -75,6 +79,10 @@ export default {
 
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
+
+.active-page {
+    border-bottom: 2px solid $WHITE;
+}
 
 #nav {
     display: flex;

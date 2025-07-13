@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <template>
     <div id="destination">
         <p id="title"><span id="title-number">01</span>PICK YOUR DESTINATION</p>

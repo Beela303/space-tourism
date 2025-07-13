@@ -18,6 +18,11 @@ import MarkShuttleworth from '@/components/MarkShuttleworth.vue'
 import VictorGlover from '@/components/VictorGlover.vue'
 import AnoushehAnsari from '@/components/AnoushehAnsari.vue'
 
+//TECHNOLOGY
+import Vehicle from '@/components/Vehicle.vue'
+import SpacePort from '@/components/SpacePort.vue'
+import SpaceCapsule from '@/components/SpaceCapsule.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -87,6 +92,23 @@ const router = createRouter({
       path: '/crew/Anousheh-Ansari',
       name: 'AnoushehAnsari',
       component: AnoushehAnsari,
+    },
+
+    //TECHNOLOGY
+    {
+      path: '/technology/vehicle',
+      name: 'vehicle',
+      component: Vehicle,
+    },
+    {
+      path: '/technology/spaceport',
+      name: 'spaceport',
+      component: SpacePort,
+    },
+    {
+      path: '/technology/spacecapsule',
+      name: 'spacecapsule',
+      component: SpaceCapsule,
     },
   ],
 })

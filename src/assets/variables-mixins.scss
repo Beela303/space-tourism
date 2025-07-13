@@ -150,7 +150,7 @@ $SPACING-50: 4px;
 $SPACING-25: 2px;
 
 //TRANSITION
-$transition: 20s;
+$TRANSITION: 3s;
 
 // TITLE NUMBER
 @mixin TITLE-NUMBER {
@@ -159,8 +159,9 @@ $transition: 20s;
   margin-right: 24px;
 
   font-family: $FONT-2;
-  font-weight: bold;
   font-size: 24px;
+
+  font-weight: bold;
   letter-spacing: 4.72px;
 
   opacity: 25%;

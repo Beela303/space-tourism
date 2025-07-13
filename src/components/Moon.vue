@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <template>
     <div id="planet">
         <div id="image">
