@@ -2,9 +2,7 @@
 export default {
     data() {
         return {
-            isActive: false,
-
-            screenWidth: window.innerWidth,
+            isActive: false
         };
     },
 
@@ -15,41 +13,13 @@ export default {
 
         closeNav() {
             this.isActive = false;
-        },
-
-        updateScreenWidth() {
-            this.screenWidth = window.innerWidth;
-        },
+        }
     },
-
-    computed: {
-        homebackgroundClass() {
-            if (this.screenWidth < 768) {
-                return "home-mobile-bg";
-            } else {
-                return "home-desktop-bg";
-            }
-        },
-
-        homepageBackgroundClass() {
-            const routeName = this.$route.name;
-            return `${routeName}-page-bg`;
-        },
-    },
-
-    mounted() {
-        window.addEventListener("resize", this.updateScreenWidth);
-    },
-
-    beforeDestroy() {
-        window.removeEventListener("resize", this.updateScreenWidth);
-    },
-
 }
 </script>
 
 <template>
-    <div id="nav" :class="[homebackgroundClass, homepageBackgroundClass]">
+    <div id="nav">
         <div id="logo">
             <router-link to="/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
@@ -109,15 +79,6 @@ export default {
 
 <style lang="scss">
 @import '../assets/variables-mixins.scss';
-
-.home-desktop-bg {
-    background-image: url("../assets/home/background-home-desktop.jpg")
-}
-
-.home-mobile-bg {
-    background-image: url("../assets/home/background-home-tablet.jpg");
-}
-
 
 .active-page {
     padding-bottom: 30px;

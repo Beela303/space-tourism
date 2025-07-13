@@ -1,44 +1,5 @@
-<script>
-export default {
-    data() {
-        return {
-            screenWidth: window.innerWidth,
-        };
-    },
-
-    computed: {
-        crewbackgroundClass() {
-            if (this.screenWidth < 768) {
-                return "crew-mobile-bg";
-            } else {
-                return "crew-desktop-bg";
-            }
-        },
-
-        crewpageBackgroundClass() {
-            const routeName = this.$route.name;
-            return `${routeName}-page-bg`;
-        },
-    },
-
-    mounted() {
-        window.addEventListener("resize", this.updateScreenWidth);
-    },
-
-    beforeDestroy() {
-        window.removeEventListener("resize", this.updateScreenWidth);
-    },
-
-    methods: {
-        updateScreenWidth() {
-            this.screenWidth = window.innerWidth;
-        },
-    },
-}
-</script>
-
 <template>
-    <div id="crew-body" :class="[crewbackgroundClass, crewpageBackgroundClass]">
+    <div id="crew-body">
         <p id="title"><span id="title-number">02</span>MEET YOUR CREW</p>
 
         <div id="crew">
