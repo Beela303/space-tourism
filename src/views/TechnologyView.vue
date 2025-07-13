@@ -202,7 +202,7 @@ body {
 
 @media screen and (max-width: 375px) {
     body {
-        background-image: url("../assets/technology/background-technology-mobile.jpg") !important;
+        background-image: url("../assets/technology/background-technology-mobile.jpg");
     }
 
     #technology {

@@ -23,6 +23,11 @@ body {
     background-image: url("../assets/destination/background-destination-desktop.jpg");
 }
 
+.active-destination {
+    padding-bottom: 13px;
+    border-bottom: 5px solid $WHITE;
+}
+
 #destination {
     padding: 48px 165px;
 
@@ -63,7 +68,8 @@ body {
                         margin-right: 13px;
 
                         &:hover {
-                            border-bottom: 2px solid $WHITE;
+                            padding-bottom: 13px;
+                            border-bottom: 5px solid $WHITE;
                         }
 
                         a {

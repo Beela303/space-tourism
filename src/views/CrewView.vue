@@ -161,7 +161,7 @@ body {
 
 @media screen and (max-width: 375px) {
     body {
-        background-image: url("../assets/crew/background-crew-mobile.jpg") !important;
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
     }
 
     #crew-body {

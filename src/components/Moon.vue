@@ -8,16 +8,16 @@
             <div id="other-planets">
                 <ul>
                     <li>
-                        <router-link to="/destination">Moon</router-link>
+                        <router-link exact-active-class="active-destination" to="/destination">Moon</router-link>
                     </li>
                     <li>
-                        <router-link to="/destination/mars">Mars</router-link>
+                        <router-link exact-active-class="active-destination" to="/destination/mars">Mars</router-link>
                     </li>
                     <li>
-                        <router-link to="/destination/europa">Europa</router-link>
+                        <router-link exact-active-class="active-destination" to="/destination/europa">Europa</router-link>
                     </li>
                     <li>
-                        <router-link to="/destination/titan">Titan</router-link>
+                        <router-link exact-active-class="active-destination" to="/destination/titan">Titan</router-link>
                     </li>
                 </ul>
             </div>

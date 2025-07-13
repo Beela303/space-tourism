@@ -204,6 +204,14 @@ export default {
 }
 
 @media screen and (max-width: 375px) {
+    .active-page {
+        padding-right: 155px;
+        padding-bottom: 0;
+
+        border-bottom: 0;
+        border-right: 5px solid $WHITE;
+    }
+
     #nav {
         justify-content: space-between;
 
