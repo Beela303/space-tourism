@@ -272,6 +272,8 @@ export default {
                     }
 
                     &:hover {
+                        background: none;
+                        border-bottom: none;
                         border-right: 200px solid $WHITE;
                     }
 
