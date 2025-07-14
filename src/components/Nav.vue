@@ -206,9 +206,9 @@ export default {
 @media screen and (max-width: 375px) {
     .active-page {
         padding-right: 155px;
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
 
-        border-bottom: 0;
+        border-bottom: none !important;
         border-right: 5px solid $WHITE;
     }
 
@@ -272,9 +272,7 @@ export default {
                     }
 
                     &:hover {
-                        background: none;
-                        border-bottom: none;
-                        border-right: 200px solid $WHITE;
+                        border-bottom: 0 !important;
                     }
 
                     a {
