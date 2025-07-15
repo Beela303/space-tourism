@@ -80,7 +80,11 @@ body {
 
   #home {
     height: 334px;
-    padding: 128px 50px;
+
+    padding: 128px auto; //128 50
+
+    justify-content: center !important;
+    justify-self: center !important;
     text-align: center !important;
 
     display: block;

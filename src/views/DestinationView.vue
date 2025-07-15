@@ -132,11 +132,15 @@ body {
         padding: 40px;
 
         #planet {
-            display: block;
+            width: 100%;
+            height: 100%;
+            margin-top: 36.2px;
+
+            justify-self: center;
             justify-content: center;
             text-align: center;
 
-            margin-top: 36.2px;
+            display: block;
 
             #image {
                 margin-right: 0;

@@ -162,31 +162,34 @@ export default {
 
 @media screen and (max-width: 768px) {
     #nav {
-
         hr {
             display: none;
         }
 
         #logo {
-            width: 160px;
+            width: 160px; //160
             padding: 24px;
         }
 
         #glass-nav {
-            width: 640px;
+            //width: 640px; //640
             /* 640 */
 
             padding: 38.5px;
             margin-top: 0;
 
+            overflow-x: scroll;
+
             ul {
                 li {
+                    margin-right: 38.5; //38.5
+
                     &:first-child {
-                        margin-left: 117px;
+                        margin-left: 0; //117
                     }
 
                     &:last-child {
-                        margin-right: 40px;
+                        margin-right: 0; //40
                     }
                 }
             }
