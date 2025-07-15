@@ -90,7 +90,7 @@ export default {
     justify-content: space-between;
 
     hr {
-        width: 560px;
+        width: 20%;
         height: .5px;
 
         margin-top: 87.5px;
@@ -98,7 +98,7 @@ export default {
     }
 
     #logo {
-        width: 48px;
+        width: 48px; //48
         height: 48px;
 
         padding: 64px;
@@ -108,7 +108,6 @@ export default {
         background-color: rgba(255, 255, 255, .1);
 
         //width: 768px; //900
-        width: 90%;
         height: 96px;
 
         padding: 35px;
@@ -116,6 +115,8 @@ export default {
 
         backdrop-filter: blur(10px);
         --webkit-backdrop-filter: blur(10px);
+
+        overflow-y: hidden;
 
         /*
             border: 1px solid rgba(255, 255, 255, .3);
@@ -132,7 +133,7 @@ export default {
                 margin-right: 48px;
 
                 &:first-child {
-                    margin-left: 150px;
+                    margin-left: 100px; //150
                 }
 
                 &:last-child {
@@ -174,11 +175,10 @@ export default {
         #glass-nav {
             //width: 640px; //640
             /* 640 */
+            height: 48px;
 
             padding: 38.5px;
             margin-top: 0;
-
-            overflow-x: scroll;
 
             ul {
                 li {

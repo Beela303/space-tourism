@@ -19,6 +19,8 @@
 @import '../assets/variables-mixins.scss';
 
 body {
+  overflow-x: hidden !important;
+
   background-image: url("../assets/home/background-home-desktop.jpg") !important;
 }
 

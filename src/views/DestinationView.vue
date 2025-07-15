@@ -133,7 +133,6 @@ body {
 
         #planet {
             width: 100%;
-            height: 100%;
             margin-top: 36.2px;
 
             justify-self: center;
@@ -210,6 +209,10 @@ body {
                     ul {
                         margin-top: 32px;
                     }
+                }
+
+                #planet-title {
+                    font-size: 50px;
                 }
 
                 #info {
